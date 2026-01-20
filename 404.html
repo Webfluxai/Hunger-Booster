@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hunger Booster</title>
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This 404.html takes the current path and redirects to index.html with the path query string
+
+    var pathSegmentsToKeep = 1; // Set to 1 if deploying to username.github.io/repo-name/ (Project Pages)
+    // Since we are using relative base in vite, we need to be careful.
+    // Let's try to detect if we are in a subdirectory.
+
+    // Simple logic: Redirect to the index page with a query param telling it where we wanted to go.
+
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
